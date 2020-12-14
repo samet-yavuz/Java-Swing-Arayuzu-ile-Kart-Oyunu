@@ -1,0 +1,1195 @@
+package proje.proje_2;
+
+public class Sporcu {
+    String sporcuIsim;
+    String sporcuTakım;
+    String sporcuKartYolu;
+//Parametreli ve parametresiz Constructor'lar tanımlandı.
+    public Sporcu(String sporcuIsim, String sporcuTakım,String sporcuKartYolu) {
+        this.sporcuIsim = sporcuIsim;
+        this.sporcuTakım = sporcuTakım;
+        this.sporcuKartYolu = sporcuKartYolu;
+    }
+
+    public Sporcu() {
+        
+    }
+    
+    public void sporcuPuaniGoster(){
+        
+    }
+//getter ve setter'lar
+    public String getSporcuIsim() {
+        return sporcuIsim;
+    }
+
+    public void setSporcuIsim(String sporcuIsim) {
+        this.sporcuIsim = sporcuIsim;
+    }
+
+    public String getSporcuTakım() {
+        return sporcuTakım;
+    }
+
+    public void setSporcuTakım(String sporcuTakım) {
+        this.sporcuTakım = sporcuTakım;
+    }
+
+    public String getSporcuKartYolu() {
+        return sporcuKartYolu;
+    }
+
+    public void setSporcuKartYolu(String sporcuKartYolu) {
+        this.sporcuKartYolu = sporcuKartYolu;
+    }
+
+}
+package proje.proje_2;
+
+import java.awt.Image;
+
+public class Futbolcu extends Sporcu{
+   private int penalti;
+   private int setbestVurus;
+   private int kaleciKarsiKarsiya;
+   private boolean kartKullanildiMi;
+   private String futbolcuAdi;
+   private String futbolcuTakim;
+
+   
+//Parametreli ve parametresiz Constructor'lar tanımlandı.
+    public Futbolcu(int penalti, int setbestVurus, int kaleciKarsiKarsiya, String sporcuIsim, String sporcuTakım, String sporcuKartYolu, boolean kartKullanildiMi) {
+        this.penalti = penalti;
+        this.setbestVurus = setbestVurus;
+        this.kaleciKarsiKarsiya = kaleciKarsiKarsiya;
+        this.futbolcuAdi = sporcuIsim;
+        this.futbolcuTakim = sporcuTakım;
+        this.sporcuKartYolu = sporcuKartYolu;
+        this.kartKullanildiMi = kartKullanildiMi;
+    }
+
+    public Futbolcu() {
+    }
+    
+    public Futbolcu(String sporcuIsim, String sporcuTakım,String sporcuKartYolu) {
+        super(sporcuIsim, sporcuTakım, sporcuKartYolu);
+    }
+
+    @Override
+    public void sporcuPuaniGoster() {
+        super.sporcuPuaniGoster();
+        System.out.println(this.penalti+" ");
+    }
+
+    public boolean isKartKullanildiMi() {
+        return kartKullanildiMi;
+    }
+
+    public void setKartKullanildiMi(boolean kartKullanildiMi) {
+        this.kartKullanildiMi = kartKullanildiMi;
+    }
+
+    public String getFutbolcuAdi() {
+        return futbolcuAdi;
+    }
+
+    public void setFutbolcuAdi(String futbolcuAdi) {
+        this.futbolcuAdi = futbolcuAdi;
+    }
+
+    public String getFutbolcuTakim() {
+        return futbolcuTakim;
+    }
+
+    public void setFutbolcuTakim(String futbolcuTakim) {
+        this.futbolcuTakim = futbolcuTakim;
+    }
+
+    public int getPenalti() {
+        return penalti;
+    }
+
+    public void setPenalti(int penalti) {
+        this.penalti = penalti;
+    }
+
+    public int getSetbestVurus() {
+        return setbestVurus;
+    }
+
+    public void setSetbestVurus(int setbestVurus) {
+        this.setbestVurus = setbestVurus;
+    }
+
+    public int getKaleciKarsiKarsiya() {
+        return kaleciKarsiKarsiya;
+    }
+
+    public void setKaleciKarsiKarsiya(int kaleciKarsiKarsiya) {
+        this.kaleciKarsiKarsiya = kaleciKarsiKarsiya;
+    }
+
+    public String getSporcuIsim() {
+        return sporcuIsim;
+    }
+
+    public void setSporcuIsim(String sporcuIsim) {
+        this.sporcuIsim = sporcuIsim;
+    }
+
+    public String getSporcuTakım() {
+        return sporcuTakım;
+    }
+
+    public void setSporcuTakım(String sporcuTakım) {
+        this.sporcuTakım = sporcuTakım;
+    }
+
+    public String getSporcuKartYolu() {
+        return sporcuKartYolu;
+    }
+
+    public void setSporcuKartYolu(String sporcuKartYolu) {
+        this.sporcuKartYolu = sporcuKartYolu;
+    }
+    
+}
+package proje.proje_2;
+
+public class Basketbolcu extends Sporcu{
+
+   private int ikilik;
+   private int ucluk;
+   private int serbestAtis;
+   private boolean kartKullanildiMi;
+   private String basketbolcuAdi;
+   private String basketbolcuTakim;
+
+    public Basketbolcu(int ikilik, int ucluk, int serbestAtis, String sporcuIsim, String sporcuTakım, String sporcuKartYolu, boolean kartKullanildiMi) {
+        this.ikilik = ikilik;
+        this.ucluk = ucluk;
+        this.serbestAtis = serbestAtis;
+        this.basketbolcuAdi = sporcuIsim;
+        this.basketbolcuTakim = sporcuTakım;
+        this.sporcuKartYolu = sporcuKartYolu;
+        this.kartKullanildiMi = kartKullanildiMi;
+    }
+    
+    public Basketbolcu() {
+    }
+    
+    public Basketbolcu(String sporcuIsim, String sporcuTakım,String sporcuKartYolu) {
+        super(sporcuIsim, sporcuTakım, sporcuKartYolu);
+    }
+
+    @Override
+    public void sporcuPuaniGoster() {
+        super.sporcuPuaniGoster();
+    }
+
+    public String getBasketbolcuAdi() {
+        return basketbolcuAdi;
+    }
+
+    public void setBasketbolcuAdi(String basketbolcuAdi) {
+        this.basketbolcuAdi = basketbolcuAdi;
+    }
+
+    public String getBasketbolcuTakim() {
+        return basketbolcuTakim;
+    }
+
+    public void setBasketbolcuTakim(String basketbolcuTakim) {
+        this.basketbolcuTakim = basketbolcuTakim;
+    }
+
+    public String getSporcuIsim() {
+        return sporcuIsim;
+    }
+
+    public void setSporcuIsim(String sporcuIsim) {
+        this.sporcuIsim = sporcuIsim;
+    }
+
+    public String getSporcuTakım() {
+        return sporcuTakım;
+    }
+
+    public void setSporcuTakım(String sporcuTakım) {
+        this.sporcuTakım = sporcuTakım;
+    }
+
+    public String getSporcuKartYolu() {
+        return sporcuKartYolu;
+    }
+
+    public void setSporcuKartYolu(String sporcuKartYolu) {
+        this.sporcuKartYolu = sporcuKartYolu;
+    }
+
+    public boolean isKartKullanildiMi() {
+        return kartKullanildiMi;
+    }
+
+    public void setKartKullanildiMi(boolean kartKullanildiMi) {
+        this.kartKullanildiMi = kartKullanildiMi;
+    }
+    
+    public int getIkilik() {
+        return ikilik;
+    }
+
+    public void setIkilik(int ikilik) {
+        this.ikilik = ikilik;
+    }
+
+    public int getUcluk() {
+        return ucluk;
+    }
+
+    public void setUcluk(int ucluk) {
+        this.ucluk = ucluk;
+    }
+
+    public int getSerbestAtis() {
+        return serbestAtis;
+    }
+
+    public void setSerbestAtis(int serbestAtis) {
+        this.serbestAtis = serbestAtis;
+    }
+    
+    
+}
+package proje.proje_2;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Oyuncu {
+    int oyuncuID;
+    String oyuncuAdi;
+    int Skor;
+    
+Futbolcu[] FkartListesi=new Futbolcu[8];
+Basketbolcu[] BkartListesi=new Basketbolcu[8];
+    
+    public void kartıAl(Futbolcu[] fdizi,Basketbolcu[] bdizi){
+    FkartListesi=fdizi;
+    BkartListesi=bdizi;
+        
+    }
+    String skorCumle;
+    
+    public String skorGoster(int oyuncuSkor,int bilgisayarSkor){
+        if(oyuncuSkor>bilgisayarSkor){
+            skorCumle="Puanınız:"+oyuncuSkor+"\nBilgisayarın Puanı:"+bilgisayarSkor+"\nSiz kazandınız.";
+            return skorCumle;
+        }
+        else if(oyuncuSkor==bilgisayarSkor){
+            skorCumle="Puanınız:"+oyuncuSkor+"\nBilgisayarın Puanı:"+bilgisayarSkor+"\nBerabere";
+            return skorCumle;
+        }
+        else{
+            skorCumle="Puanınız:"+oyuncuSkor+"\nBilgisayarın Puanı:"+bilgisayarSkor+"\nBilgisayar Kazandı";
+            return skorCumle;
+        }  
+    }
+    
+    public int[] sayilariKaristir(){
+        int temp;
+        int[] dizi = new int[8];
+        dizi[0] = 0;
+        for (int i = 0; i < 8; i++) {
+            temp = (int) (Math.random() * 8);
+            for (int j = 0; j <= i; j++) {
+                if (dizi[j] == temp) {
+                    temp = (int) (Math.random() * 8);
+                    j = 0;
+                }
+            }
+            dizi[i] = temp;
+        }
+        for (int i = 0; i < dizi.length; i++) {
+            for (int j = i + 1; j < dizi.length; j++) {
+                if (dizi[i] == dizi[j]) {
+                    dizi[j] = 0;
+                }
+            }
+        }
+        return dizi;
+    }
+    public int[] sayilariKaristir2(){
+        int temp;
+        int[] dizi = new int[4];
+        dizi[0] = 0;
+        for (int i = 0; i < 4; i++) {
+            temp = (int) (Math.random() * 4);
+            for (int j = 0; j <= i; j++) {
+                if (dizi[j] == temp) {
+                    temp = (int) (Math.random() * 4);
+                    j = 0;
+                }
+            }
+            dizi[i] = temp;
+        }
+        for (int i = 0; i < dizi.length; i++) {
+            for (int j = i + 1; j < dizi.length; j++) {
+                if (dizi[i] == dizi[j]) {
+                    dizi[j] = 0;
+                }
+            }
+        }
+        return dizi;
+    }
+    public void kartSec(){
+    
+    }
+
+//getter ve setter'lar
+    public int getOyuncuID() {
+        return oyuncuID;
+    }
+
+    public void setOyuncuID(int oyuncuID) {
+        this.oyuncuID = oyuncuID;
+    }
+
+    public String getOyuncuAdi() {
+        return oyuncuAdi;
+    }
+
+    public void setOyuncuAdi(String oyuncuAdi) {
+        this.oyuncuAdi = oyuncuAdi;
+    }
+
+    public int getSkor() {
+        return Skor;
+    }
+
+    public void setSkor(int Skor) {
+        this.Skor = Skor;
+    }
+
+    public Futbolcu[] getFkartListesi() {
+        return FkartListesi;
+    }
+
+    public void setFkartListesi(Futbolcu[] FkartListesi) {
+        this.FkartListesi = FkartListesi;
+    }
+
+    public Basketbolcu[] getBkartListesi() {
+        return BkartListesi;
+    }
+
+    public void setBkartListesi(Basketbolcu[] BkartListesi) {
+        this.BkartListesi = BkartListesi;
+    }
+
+
+}
+package proje.proje_2;
+
+import java.util.ArrayList;
+
+public class Bilgisayar extends Oyuncu{
+
+    public Bilgisayar() {
+        
+    }
+
+
+    public String skorGoster(int oyuncuSkor, int bilgisayarSkor) {
+        return super.skorGoster(oyuncuSkor, bilgisayarSkor);
+    }
+
+    @Override
+    public void kartSec() {
+        super.kartSec(); 
+    }
+    public int getOyuncuID() {
+        return oyuncuID;
+    }
+
+    public void setOyuncuID(int oyuncuID) {
+        this.oyuncuID = oyuncuID;
+    }
+
+    public String getOyuncuAdi() {
+        return oyuncuAdi;
+    }
+
+    public void setOyuncuAdi(String oyuncuAdi) {
+        this.oyuncuAdi = oyuncuAdi;
+    }
+
+    public int getSkor() {
+        return Skor;
+    }
+
+    public void setSkor(int Skor) {
+        this.Skor = Skor;
+    }
+
+}
+package proje.proje_2;
+
+import java.util.ArrayList;
+
+public class Kullanıcı extends Oyuncu{
+
+    public Kullanıcı() {
+    }
+    
+    public String skorGoster(int oyuncuSkor, int bilgisayarSkor) {
+        return super.skorGoster(oyuncuSkor, bilgisayarSkor);
+    }
+    
+    @Override
+    public void kartSec() {
+        super.kartSec(); 
+    }
+
+    public int getOyuncuID() {
+        return oyuncuID;
+    }
+
+    public void setOyuncuID(int oyuncuID) {
+        this.oyuncuID = oyuncuID;
+    }
+
+    public String getOyuncuAdi() {
+        return oyuncuAdi;
+    }
+
+    public void setOyuncuAdi(String oyuncuAdi) {
+        this.oyuncuAdi = oyuncuAdi;
+    }
+
+    public int getSkor() {
+        return Skor;
+    }
+
+    public void setSkor(int Skor) {
+        this.Skor = Skor;
+    }
+
+}
+package proje.proje_2;
+
+
+
+public class Test {        
+    
+    public static void main(String[] args) {
+        
+    Futbolcu fRonaldo =new Futbolcu(95,95,95,"Cristiano Ronaldo","Juventus","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fronaldo.jpg",false);
+    Futbolcu fMessi = new Futbolcu(90,90,95,"Lionel Messi","Barcelona","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fmessi.jpg",false);
+    Futbolcu fNeymar = new Futbolcu(80,85,90,"Neymar Jr.","Paris Saint Germain","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fneymar.jpg",false);
+    Futbolcu fLewandowski = new Futbolcu(90,70,95,"Robert Lewandowski","Bayern München","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\flewandowski.jpg",false);
+    Futbolcu fUnder = new Futbolcu(85,95,85,"Cengiz Under","Leicester City","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fUnder.jpg",false);
+    Futbolcu fAlex = new Futbolcu(90,70,75,"Alex de Souza","Fenerbahçe","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\falex.jpg",false);
+    Futbolcu fHagi = new Futbolcu(75,75,80,"Gheorghe Hagi","Galatasaray","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fhagi.jpg",false);
+    Futbolcu fSalah = new Futbolcu(75,70,90,"Mohamed Salah","Liverpool","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fsalah.jpg",false);
+//------------------------------------------------------
+    Basketbolcu bJordan =new Basketbolcu(100,95,100,"Michael Jordan","Chicago Bulls","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bjordan.jpg",false);
+    Basketbolcu bCurry =new Basketbolcu(100,90,75,"Stephan Curry","Golden State Warriors","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bcurry.jpg",false);
+    Basketbolcu bLebron =new Basketbolcu(90,95,90,"Lebron James","Los Angeles Lakers","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\blebron.jpg",false);
+    Basketbolcu bCedi =new Basketbolcu(60,65,65,"Cedi Osman","Cleveland","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bcedi.jpg",false);
+    Basketbolcu bLarkin =new Basketbolcu(70,70,70,"Shane Larkin","Anadolu Efes","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\blarkin.jpg",false);
+    Basketbolcu bVesely =new Basketbolcu(10,70,50,"Jan Vesely","FB Beko","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bvesely.jpg",false);
+    Basketbolcu bSloukas =new Basketbolcu(65,75,100,"Kostas Sloukas","Olympiakos","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bsloukas.jpg",false);
+    Basketbolcu bTurkoglu =new Basketbolcu(90,70,70,"Hidayet Turkoglu","Los Angeles Creepers","C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bturkoglu.jpg",false); 
+    
+            
+Futbolcu[] FkartListesi=new Futbolcu[8];
+Basketbolcu[] BkartListesi=new Basketbolcu[8];
+    
+    Oyuncu oyuncu =new Oyuncu();
+    GameScreen gamescreen =new GameScreen();
+    
+    FkartListesi[0]=fRonaldo;
+    FkartListesi[1]=fMessi;
+    FkartListesi[2]=fNeymar;
+    FkartListesi[3]=fLewandowski;
+    FkartListesi[4]=fUnder;
+    FkartListesi[5]=fAlex;
+    FkartListesi[6]=fHagi;
+    FkartListesi[7]=fSalah;
+    BkartListesi[0]=bJordan;
+    BkartListesi[1]=bCurry;
+    BkartListesi[2]=bLebron;
+    BkartListesi[3]=bCedi;
+    BkartListesi[4]=bLarkin;
+    BkartListesi[5]=bVesely;
+    BkartListesi[6]=bSloukas;
+    BkartListesi[7]=bTurkoglu;
+   
+
+     
+    oyuncu.kartıAl(FkartListesi, BkartListesi);
+
+
+    
+    gamescreen.kartıAl(FkartListesi, BkartListesi);
+    gamescreen.futbolAttır(oyuncu.sayilariKaristir());
+    gamescreen.basketbolAttır(oyuncu.sayilariKaristir());
+    gamescreen.labelAttır(oyuncu.sayilariKaristir2());
+    gamescreen.kartlarıDagıt();
+    gamescreen.setVisible(true);
+
+}
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proje.proje_2;
+
+import java.util.ArrayList;
+import javax.swing.JLabel;
+
+/**
+ *
+ * @author yavuz
+ */
+public class GameScreen extends javax.swing.JFrame {
+
+Oyuncu oyuncu=new Oyuncu();
+Test test=new Test();
+
+Futbolcu[] FkartListesi=new Futbolcu[8];
+Basketbolcu[] BkartListesi=new Basketbolcu[8];
+int[] futbolAt=new int[8];
+int[] basketbolAt=new int[8];
+int[] pozAt=new int[3];
+int[] labelAt=new int[4];
+boolean Bkontrol=false,Fkontrol=true;
+int labelKont=0,sıra=0,secKartKont;
+JLabel[] PCkartlari=new JLabel[8];
+int kartKont=0;
+int oyuncuSkor=0;
+int bilgisayarSkor=0;
+boolean ButonKontrol=true;
+int futbol;
+int basketbol;
+String poz;
+int pozisyon;
+
+
+    public void kartıAl(Futbolcu[] fdizi,Basketbolcu[] bdizi){
+        
+    FkartListesi=fdizi;
+    BkartListesi=bdizi;
+    }
+    public void futbolAttır(int[] dizi){
+    futbolAt=dizi;
+    }
+    public void basketbolAttır(int[] dizi){
+    basketbolAt=dizi ;
+    }
+    
+    public void pozAttır(int[] dizi){
+    pozAt=dizi;
+    }
+    public void labelAttır(int[] dizi){
+    labelAt=dizi;
+    }
+
+    public GameScreen() {
+        initComponents();
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        jTextPane1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jScrollPane1.setViewportView(jTextPane1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(1270, 50, 160, 210);
+
+        jButton2.setText("Kartı Seç");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(1300, 330, 120, 50);
+
+        jButton1.setText("Sonraki Tur");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(1300, 420, 120, 50);
+
+        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(50, 550, 142, 200);
+
+        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        jLabel16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel16MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(200, 550, 142, 200);
+
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(350, 550, 142, 200);
+
+        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        jLabel14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel14MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(500, 550, 142, 200);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel13MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(650, 550, 142, 200);
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(800, 550, 142, 200);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(950, 550, 142, 200);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(1100, 550, 142, 200);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(1100, 50, 142, 200);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(950, 50, 142, 200);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(800, 50, 142, 200);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(650, 50, 142, 200);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(500, 50, 142, 200);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(350, 50, 142, 200);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(200, 50, 142, 200);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg")); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(50, 50, 142, 200);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\gameBackground.jpg")); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1500, 800);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1538, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 1538, 800);
+
+        pack();
+    }// </editor-fold>                        
+
+    public void kartlarıDagıt(){
+    jLabel10.setIcon(new javax.swing.ImageIcon(BkartListesi[basketbolAt[0]].getSporcuKartYolu()));
+    jLabel11.setIcon(new javax.swing.ImageIcon(BkartListesi[basketbolAt[1]].getSporcuKartYolu()));
+    jLabel12.setIcon(new javax.swing.ImageIcon(BkartListesi[basketbolAt[2]].getSporcuKartYolu()));
+    jLabel13.setIcon(new javax.swing.ImageIcon(BkartListesi[basketbolAt[3]].getSporcuKartYolu())); 
+    jLabel14.setIcon(new javax.swing.ImageIcon(FkartListesi[futbolAt[4]].getSporcuKartYolu()));
+    jLabel15.setIcon(new javax.swing.ImageIcon(FkartListesi[futbolAt[5]].getSporcuKartYolu())); 
+    jLabel16.setIcon(new javax.swing.ImageIcon(FkartListesi[futbolAt[6]].getSporcuKartYolu())); 
+    jLabel17.setIcon(new javax.swing.ImageIcon(FkartListesi[futbolAt[7]].getSporcuKartYolu()));
+    PCkartlari[0]=jLabel2;
+    PCkartlari[1]=jLabel3;
+    PCkartlari[2]=jLabel4;
+    PCkartlari[3]=jLabel5;
+    PCkartlari[4]=jLabel6;
+    PCkartlari[5]=jLabel7;
+    PCkartlari[6]=jLabel8;
+    PCkartlari[7]=jLabel9;
+    }
+
+    
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {                                      
+            if (Bkontrol==true) {
+            Fkontrol=false;
+            Bkontrol=false;
+            jLabel10.setLocation(500, 300);
+            kartKont=10;
+            sıra++;
+            BkartListesi[basketbolAt[0]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {                                      
+            if (Bkontrol==true) {
+            Fkontrol=false;
+            Bkontrol=false;
+            jLabel11.setLocation(500, 300);
+            kartKont=11;
+            sıra++;
+            BkartListesi[basketbolAt[1]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        if (Bkontrol==true) {
+            Fkontrol=false;
+            Bkontrol=false;
+            jLabel12.setLocation(500, 300);
+            kartKont=12;
+            sıra++;
+            BkartListesi[basketbolAt[2]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {                                      
+            if (Bkontrol==true) {
+            Fkontrol=false;
+            Bkontrol=false;
+            jLabel13.setLocation(500, 300);
+            kartKont=13;
+            sıra++;
+            BkartListesi[basketbolAt[3]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        if (Fkontrol==true) {
+            Fkontrol=false;
+            Bkontrol=false;
+            jLabel14.setLocation(500, 300);
+            kartKont=14;
+            sıra++;
+            FkartListesi[futbolAt[4]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        if (Fkontrol==true) {
+        Fkontrol=false;
+        Bkontrol=false;
+        jLabel15.setLocation(500, 300);     
+        kartKont=15;
+        sıra++;
+        FkartListesi[futbolAt[5]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        if (Fkontrol==true) {
+        Fkontrol=false;
+        Bkontrol=false;
+        jLabel16.setLocation(500, 300); 
+        kartKont=16;
+        sıra++;
+        FkartListesi[futbolAt[6]].setKartKullanildiMi(true);
+        }
+    }                                     
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {                                      
+        if (Fkontrol==true) {
+            Fkontrol=false;
+            Bkontrol=false;
+            jLabel17.setLocation(500, 300); 
+            kartKont=17;
+            secKartKont=futbolAt[7];
+            sıra++;
+            FkartListesi[futbolAt[7]].setKartKullanildiMi(true);
+        }
+
+    }                                     
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+
+       if(sıra%2==1){
+       PCkartlari[futbol].setVisible(false);
+       Bkontrol=true;}
+       else if(sıra%2==0){
+       PCkartlari[basketbol].setVisible(false);
+       Fkontrol=true;}
+       
+    switch (kartKont) {
+        case 17:
+            jLabel17.setVisible(false);break;
+        case 16:
+            jLabel16.setVisible(false);break;
+        case 15:
+            jLabel15.setVisible(false);break;
+        case 14:
+            jLabel14.setVisible(false);break;
+        case 13:
+            jLabel13.setVisible(false);break;
+        case 12:
+            jLabel12.setVisible(false);break;
+        case 11:
+            jLabel11.setVisible(false);break;
+        case 10:
+            jLabel10.setVisible(false);break;
+        default:break;
+    }
+       
+        if(labelKont>4)
+            jTextPane1.setText(oyuncu.skorGoster(oyuncuSkor, bilgisayarSkor));
+  
+    
+    }                                        
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    if(sıra%2==1){
+    PCkartlari[labelAt[labelKont]].setLocation(650,300);
+    PCkartlari[labelAt[labelKont]].setIcon(new javax.swing.ImageIcon(FkartListesi[futbolAt[labelKont]].getSporcuKartYolu())); 
+    FkartListesi[futbolAt[labelKont]].setKartKullanildiMi(true);
+    futbol=labelAt[labelKont];
+    pozisyon =(int) (Math.random() * 3);
+    
+        switch (pozisyon) {
+            case 0:
+                poz="Penalti";
+                break;
+            case 1:
+                poz="Serbest Vurus";
+                break;
+            default:
+                poz="Kaleciyle Karsi Karsiya";
+                break;
+        }
+        
+        switch (karsilastirFutbolcu(futbolAt[labelKont],futbolAt[kartKont%10],pozisyon)) {
+            case 1:
+                jTextPane1.setText("Pozisyon:"+poz+"\n5 Puan Kazandınız...");
+                oyuncuSkor=oyuncuSkor+5;
+                break;
+            case 0:
+                jTextPane1.setText("Pozisyon:"+poz+"\nBerabere.Kimse Puan Alamadı...\nLütfen yeniden kart seçiniz");
+                berabereDurumu(labelAt[labelKont]);
+                berabereDurumu(kartKont);
+                Fkontrol=true;Bkontrol=false;
+                labelKont--;sıra--;
+                break;
+            case -1:
+                jTextPane1.setText("Pozisyon:"+poz+"\nBilgisayar 5 Puan Kazandı...");
+                bilgisayarSkor=bilgisayarSkor+5;
+                break;
+            default:
+                break;
+        }
+    labelKont++;
+    }
+    else{
+    PCkartlari[labelAt[labelKont-1]+4].setLocation(650,300);
+    PCkartlari[labelAt[labelKont-1]+4].setIcon(new javax.swing.ImageIcon(BkartListesi[basketbolAt[labelKont+3]].getSporcuKartYolu()));
+    BkartListesi[basketbolAt[labelKont+3]].setKartKullanildiMi(true);
+    basketbol= labelAt[labelKont-1]+4;
+    pozisyon =(int) (Math.random() * 3);
+    
+        switch (pozisyon) {
+            case 0:
+                poz="Ucluk";
+                break;
+            case 1:
+                poz="Ikilik";
+                break;
+            default:
+                poz="Serbset Atis";
+                break;
+        }
+
+        switch (karsilastirBasketbolcu(basketbolAt[labelKont+3],basketbolAt[kartKont%10],pozisyon)) {
+            case 1:
+                jTextPane1.setText("Pozisyon:"+poz+"\n5 Puan Kazandınız...");
+                oyuncuSkor=oyuncuSkor+5;
+                break;
+            case 0:
+                jTextPane1.setText("Pozisyon:"+poz+"\nBerabere.Kimse Puan Alamadı...\nLütfen yeniden kart seçiniz");
+                berabereDurumu(labelAt[labelKont-1]+6);
+                berabereDurumu(kartKont);
+                Fkontrol=false;Bkontrol=true;
+                labelKont--;sıra--;
+                break;
+            case -1:
+                jTextPane1.setText("Pozisyon:"+poz+"\nBilgisayar 5 Puan Kazandı...");
+                bilgisayarSkor=bilgisayarSkor+5;
+                break;
+            default:
+                break;
+        }
+    if(labelKont==4)
+        labelKont++;
+    }
+    }                                        
+    public int karsilastirFutbolcu(int BkartListIndex,int KkartListIndex,int pozisyon){
+    switch (pozisyon) {
+        case 0:
+            if(FkartListesi[KkartListIndex].getPenalti()>FkartListesi[BkartListIndex].getPenalti())
+                return 1;
+            else if(FkartListesi[KkartListIndex].getPenalti()==FkartListesi[BkartListIndex].getPenalti())
+                return 0;
+            else
+                return -1;
+        case 1:
+            if(FkartListesi[KkartListIndex].getSetbestVurus()>FkartListesi[BkartListIndex].getSetbestVurus())
+                return 1;
+            else if(FkartListesi[KkartListIndex].getSetbestVurus()==FkartListesi[BkartListIndex].getSetbestVurus())
+                return 0;
+            else
+                return -1;
+        default:
+            if(FkartListesi[KkartListIndex].getKaleciKarsiKarsiya()>FkartListesi[BkartListIndex].getKaleciKarsiKarsiya())
+                return 1;
+            else if(FkartListesi[KkartListIndex].getKaleciKarsiKarsiya()==FkartListesi[BkartListIndex].getKaleciKarsiKarsiya())
+                return 0;
+            else
+                return -1;
+    }
+    }
+    public int karsilastirBasketbolcu(int BkartListIndex,int KkartListIndex,int pozisyon){
+    switch (pozisyon) {
+        case 0:
+            if(BkartListesi[KkartListIndex].getUcluk()>BkartListesi[BkartListIndex].getUcluk())
+                return 1;
+            else if(BkartListesi[KkartListIndex].getUcluk()==BkartListesi[BkartListIndex].getUcluk())
+                return 0;
+            else
+                return -1;
+        case 1:
+            if(BkartListesi[KkartListIndex].getIkilik()>BkartListesi[BkartListIndex].getIkilik())
+                return 1;
+            else if(BkartListesi[KkartListIndex].getIkilik()==BkartListesi[BkartListIndex].getIkilik())
+                return 0;
+            else
+                return -1;
+        default:
+            if(BkartListesi[KkartListIndex].getSerbestAtis()>BkartListesi[BkartListIndex].getSerbestAtis())
+                return 1;
+            else if(BkartListesi[KkartListIndex].getSerbestAtis()==BkartListesi[BkartListIndex].getSerbestAtis())
+                return 0;
+            else
+                return -1;
+    }
+    }
+       public void berabereDurumu(int index){
+    switch (index){
+        case 2:
+            jLabel2.setLocation(50, 50);
+            jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg"));break;
+        case 3:
+            jLabel3.setLocation(200, 50);
+            jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg"));break;
+        case 4:
+            jLabel4.setLocation(350, 50);
+            jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg"));break;
+        case 5:
+            jLabel5.setLocation(500, 50);
+            jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\fkartarka.jpg"));break;
+        case 6:
+            jLabel6.setLocation(650, 50);
+            jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg"));break;
+        case 7:
+            jLabel7.setLocation(800, 50);
+            jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg"));break;
+        case 8:
+            jLabel8.setLocation(950, 50);
+            jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg"));break;
+        case 9:
+            jLabel9.setLocation(1100, 50);
+            jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\yavuz\\Desktop\\NetBeansProjects\\Proje_2\\src\\main\\java\\proje\\proje_2\\photos\\bkartarka.jpg"));break; 
+        case 10:
+            jLabel10.setLocation(1100, 550);break;
+        case 11:
+            jLabel11.setLocation(950, 550);break;
+        case 12:
+            jLabel12.setLocation(800, 550);break;
+        case 13:
+            jLabel13.setLocation(650, 550);break;
+        case 14:
+            jLabel14.setLocation(500, 550);break;
+        case 15:
+            jLabel15.setLocation(350, 550);break;
+        case 16:
+            jLabel16.setLocation(200, 550);break;
+        case 17:
+            jLabel17.setLocation(50, 550);break;
+            default:break;
+    }
+    }
+    public JLabel getjLabel2() {
+        return jLabel2;
+    }
+
+    public void setjLabel2(JLabel jLabel2) {
+        this.jLabel2 = jLabel2;
+    }
+
+    public Futbolcu[] getFkartListesi() {
+        return FkartListesi;
+    }
+
+    public void setFkartListesi(Futbolcu[] FkartListesi) {
+        this.FkartListesi = FkartListesi;
+    }
+
+    public Basketbolcu[] getBkartListesi() {
+        return BkartListesi;
+    }
+
+    public void setBkartListesi(Basketbolcu[] BkartListesi) {
+        this.BkartListesi = BkartListesi;
+    }
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(GameScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(GameScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(GameScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(GameScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GameScreen().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
+    // End of variables declaration                   
+}
